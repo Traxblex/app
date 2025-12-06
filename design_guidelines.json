@@ -1,0 +1,237 @@
+{
+  "design_system": {
+    "identity": {
+      "name": "AniStream - The E1 Vision",
+      "archetype": "Electric & Neon (Cyberpunk/Future)",
+      "core_values": [
+        "Immersion over Information",
+        "Motion as Meaning",
+        "Darkness with Depth",
+        "Otaku-Premium Aesthetic"
+      ]
+    },
+    "typography": {
+      "font_family": {
+        "headings": "Syne, sans-serif",
+        "body": "Outfit, sans-serif",
+        "mono": "JetBrains Mono, monospace"
+      },
+      "weights": {
+        "headings": "700 (Bold) or 800 (ExtraBold)",
+        "body": "400 (Regular) and 500 (Medium)"
+      },
+      "imports": [
+        "https://fonts.googleapis.com/css2?family=Syne:wght@400..800&family=Outfit:wght@300..700&family=JetBrains+Mono:wght@400&display=swap"
+      ],
+      "usage_rules": {
+        "headings": "Use 'Syne' for all H1-H3. Tight tracking (-0.02em). Uppercase for H1.",
+        "body": "Use 'Outfit' for all UI text, descriptions, and metadata.",
+        "mono": "Use for episode numbers, timestamps, and technical data."
+      }
+    },
+    "colors": {
+      "palette": {
+        "background": {
+          "default": "#050505",
+          "paper": "#0a0a0a",
+          "surface": "#121212"
+        },
+        "primary": {
+          "main": "#7c3aed",
+          "light": "#a78bfa",
+          "dark": "#5b21b6",
+          "glow": "0 0 20px rgba(124, 58, 237, 0.5)"
+        },
+        "secondary": {
+          "main": "#ec4899",
+          "glow": "0 0 20px rgba(236, 72, 153, 0.5)"
+        },
+        "accent": {
+          "cyan": "#06b6d4",
+          "lime": "#84cc16"
+        },
+        "text": {
+          "primary": "#ffffff",
+          "secondary": "#a1a1aa",
+          "muted": "#52525b"
+        },
+        "status": {
+          "success": "#10b981",
+          "error": "#ef4444",
+          "warning": "#f59e0b"
+        }
+      },
+      "gradients": {
+        "hero_overlay": "linear-gradient(to top, #050505 10%, transparent 100%)",
+        "brand_mesh": "radial-gradient(circle at 50% 50%, #7c3aed20 0%, transparent 50%)",
+        "card_hover": "linear-gradient(45deg, rgba(124, 58, 237, 0.1), rgba(236, 72, 153, 0.1))"
+      }
+    },
+    "spacing": {
+      "scale": {
+        "xs": "0.25rem",
+        "sm": "0.5rem",
+        "md": "1rem",
+        "lg": "1.5rem",
+        "xl": "2rem",
+        "2xl": "3rem",
+        "3xl": "4rem",
+        "section": "6rem"
+      },
+      "container_padding": "p-6 md:p-12 lg:p-16"
+    },
+    "visual_enhancers": {
+      "radius": {
+        "sm": "4px",
+        "md": "8px",
+        "lg": "16px",
+        "full": "9999px"
+      },
+      "shadows": {
+        "glow": "0 0 40px -10px rgba(124, 58, 237, 0.3)",
+        "card": "0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.3)"
+      },
+      "borders": {
+        "subtle": "1px solid rgba(255, 255, 255, 0.08)",
+        "highlight": "1px solid rgba(124, 58, 237, 0.3)"
+      },
+      "glassmorphism": {
+        "default": "backdrop-blur-xl bg-black/40 border border-white/10",
+        "heavy": "backdrop-blur-2xl bg-black/60 border border-white/5"
+      }
+    },
+    "layout_strategies": {
+      "grid_system": {
+        "catalog": "grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6",
+        "bento": "grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[200px]"
+      },
+      "containers": {
+        "max_width": "max-w-7xl mx-auto",
+        "hero": "h-[85vh] w-full relative flex items-end pb-20"
+      }
+    },
+    "motion": {
+      "library": "framer-motion",
+      "transitions": {
+        "default": {
+          "type": "spring",
+          "stiffness": 300,
+          "damping": 30
+        },
+        "slow": {
+          "duration": 0.8,
+          "ease": [0.16, 1, 0.3, 1]
+        }
+      },
+      "animations": {
+        "fade_in_up": {
+          "initial": { "opacity": 0, "y": 20 },
+          "animate": { "opacity": 1, "y": 0 }
+        },
+        "hover_scale": {
+          "scale": 1.05,
+          "transition": { "duration": 0.2 }
+        }
+      }
+    }
+  },
+  "components": {
+    "Button": {
+      "styles": "rounded-full font-bold tracking-wide transition-all duration-300",
+      "variants": {
+        "primary": "bg-primary text-white hover:shadow-[0_0_20px_rgba(124,58,237,0.5)] hover:scale-105",
+        "ghost": "bg-transparent text-white hover:bg-white/10 border border-white/20"
+      }
+    },
+    "Card": {
+      "styles": "group relative overflow-hidden rounded-xl bg-card border border-white/5 transition-all duration-300 hover:border-primary/50",
+      "image_behavior": "aspect-[2/3] object-cover w-full transition-transform duration-500 group-hover:scale-110"
+    },
+    "Input": {
+      "styles": "bg-white/5 border-white/10 focus:border-primary focus:ring-1 focus:ring-primary/50 rounded-lg h-12 px-4 text-white placeholder:text-white/30"
+    },
+    "Badge": {
+      "styles": "px-2 py-0.5 rounded text-xs font-mono uppercase tracking-wider bg-white/10 text-white/80 border border-white/10"
+    }
+  },
+  "assets": {
+    "images": {
+      "hero_banners": [
+        {
+          "url": "https://images.unsplash.com/photo-1613487971624-24f87ffdbfc5?q=80&w=1920&auto=format&fit=crop",
+          "alt": "Cyberpunk City Night",
+          "category": "hero_bg"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1572291244855-44aa55da2137?q=80&w=1920&auto=format&fit=crop",
+          "alt": "Neon Tokyo Street",
+          "category": "hero_bg"
+        }
+      ],
+      "thumbnails": [
+        {
+          "url": "https://images.unsplash.com/photo-1656857221015-ddc2163a08da?q=80&w=600&auto=format&fit=crop",
+          "alt": "Action Anime Scene",
+          "category": "anime_cover"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1610114586897-20495783e96c?q=80&w=600&auto=format&fit=crop",
+          "alt": "Fantasy Landscape",
+          "category": "anime_cover"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1703305776558-e5568941ae7a?q=80&w=600&auto=format&fit=crop",
+          "alt": "Urban Anime Vibe",
+          "category": "anime_cover"
+        }
+      ],
+      "placeholders": {
+        "user_avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Felix",
+        "logo": "https://placehold.co/200x50/000000/FFF?text=ANISTREAM"
+      }
+    },
+    "icons": "lucide-react"
+  },
+  "instructions_to_main_agent": {
+    "general": [
+      "Implement the 'Electric & Neon' theme strictly. No light mode toggles visible by default (force dark mode).",
+      "Use 'Syne' font for all headings to give a unique character.",
+      "Ensure all interactive elements have hover states with 'glow' effects.",
+      "Use the provided image URLs for mock data. Do not leave empty image blocks.",
+      "Implement a 'Bento Grid' for the 'Trending Now' section on the home page.",
+      "The Video Player must be immersive: fade out controls after 3 seconds of inactivity."
+    ],
+    "pages": {
+      "Home": "Full-screen hero slider with 'Watch Now' and 'Add to List' buttons. Horizontal scroll lists for categories.",
+      "Catalog": "Grid layout with advanced filters on the left (or top on mobile). Infinite scroll preferred.",
+      "Details": "Large backdrop image with blur. Content floats over it. 'Episodes' list should be clean and numbered.",
+      "Player": "Minimalist. Focus on the video. 'Next Episode' button appears in the last 30s."
+    },
+    "accessibility": [
+      "Ensure contrast ratios are met, especially with the neon colors on black.",
+      "All images must have alt text.",
+      "Focus states must be visible (use the primary color ring)."
+    ]
+  },
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "You tend to converge toward generic, 'on distribution' outputs. In frontend design, this creates what users call the 'AI slop' aesthetic. Avoid this: make creative, distinctive frontends that surprise and delight.",
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy",
+    "Use glass-morphism effects with backdrop filters (12-24px blur)",
+    "You MUST NOT apply universal transition. Eg: 'transition: all'. This results in breaking transforms. Always add transitions for specific interactive elements like button, input excluding transforms",
+    "You MUST NOT center align the app container, ie do not add '.App { text-align: center; }' in the css file. This disrupts the human natural reading flow of text",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations & color relevant to the app style",
+    "NEVER: use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯📚🎭🎬🎪🎉🎊🎁🎀🎂🍰🎈🎨🎰💰💵💳🏦💎🪙💸🤑📊📈📉💹🔢🏆🥇 etc for icons.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations: separates good from extraordinary.",
+    "Main agent relies on these image URLs. Missing categories (especially sponsor logos) = main agent will use placeholder text which is FORBIDDEN",
+    "Prioritize using pre-existing components from src/components/ui when applicable",
+    "Create new components that match the style and conventions of existing components when needed",
+    "Examine existing components to understand the project's component patterns before creating new ones",
+    "Components MUST use named exports (export const ComponentName = ...)",
+    "Pages MUST use default exports (export default function PageName() {...})",
+    "Use 'sonner' for toasts. Sonner component are located in '/app/src/components/ui/sonner.tsx'"
+  ]
+}
