@@ -30,7 +30,6 @@ jq==1.10.0
 markdown-it-py==4.0.0
 mccabe==0.7.0
 mdurl==0.1.2
-motor==3.3.1
 multidict==6.7.0
 mypy==1.18.2
 mypy_extensions==1.1.0
@@ -77,3 +76,7 @@ urllib3==2.5.0
 uvicorn==0.25.0
 watchfiles==1.1.1
 yarl==1.22.0
+sqlalchemy==2.0.25
+aiomysql==0.2.0
+cryptography
+pymysql
